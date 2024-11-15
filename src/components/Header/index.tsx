@@ -1,5 +1,5 @@
 import React from "react";
-import Topbar from "./components/Topbar";
+// import Topbar from "./components/Topbar";
 import Navbar from "./components/Navbar";
 import AppBar from "@mui/material/AppBar";
 
@@ -11,7 +11,7 @@ const Header = () => {
         backgroundColor: "white",
       }}
     >
-      <Topbar />
+      {/* <Topbar /> */}
       <Navbar />
     </AppBar>
   );

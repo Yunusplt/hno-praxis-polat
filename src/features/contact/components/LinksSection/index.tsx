@@ -28,7 +28,7 @@ const LinkSection = () => {
             href="tel:+0123456789"
             color="primary"
           >
-            <LocalPhoneIcon /> +49123 456 789
+            <LocalPhoneIcon /> 07115 0091363
           </Typography>
           <Typography
             variant="body1"
@@ -36,7 +36,7 @@ const LinkSection = () => {
             href="mailto:info@hnopolat.com"
             color="primary"
           >
-            <EmailIcon color="primary" /> info@hnopolat.com
+            <EmailIcon color="primary" /> info@hnopolat.de
           </Typography>
           <Typography variant="body1" component="p" color="primary">
             <MapIcon color="primary" />
