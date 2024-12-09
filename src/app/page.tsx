@@ -62,6 +62,17 @@ const HomePage = () => {
         >
           Wir freuen uns, Sie in unserer neuen HNO-Praxis begrüßen zu dürfen.
         </Typography>
+        <Typography
+          variant="subtitle2"
+          align="center"
+          gutterBottom
+          sx={{
+            color: "#1b7fc1", // Nötr bir gri ton
+            fontSize: "1.2rem",
+          }}
+        >
+          Dr. Bahtiyar Polat
+        </Typography>
         <Grid container justifyContent="center" sx={{ mt: 3 }}>
           <Grid item>
             <Paper
