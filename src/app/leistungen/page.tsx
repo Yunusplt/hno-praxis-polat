@@ -1,7 +1,8 @@
+import Services from "@/features/services";
 import React from "react";
 
 const Leistungen = () => {
-  return <div>Leistungen</div>;
+  return <Services />;
 };
 
 export default Leistungen;
