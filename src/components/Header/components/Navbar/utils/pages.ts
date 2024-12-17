@@ -4,15 +4,19 @@ export const pages = [
     href: "/",
   },
   {
+    title: "Team",
+    href: "/team",
+  },
+  {
     title: "Leistungen",
     href: "/leistungen",
   },
   {
-    title: "Kontakt",
-    href: "/kontakt",
+    title: "Online Termin",
+    href: "/online-termin",
   },
   {
-    title: "Über mich",
-    href: "/ueber-mich",
+    title: "Kontakt",
+    href: "/kontakt",
   },
 ];
