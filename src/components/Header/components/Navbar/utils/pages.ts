@@ -4,8 +4,8 @@ export const pages = [
     href: "/",
   },
   {
-    title: "Team",
-    href: "/team",
+    title: "über mich",
+    href: "/ueber-mich",
   },
   {
     title: "Leistungen",
@@ -13,7 +13,7 @@ export const pages = [
   },
   {
     title: "Online Termin",
-    href: "/online-termin",
+    href: "https://www.termed.de/arzt/9154/bahtiyar-polat",
   },
   {
     title: "Kontakt",

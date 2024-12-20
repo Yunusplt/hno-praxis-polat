@@ -1,8 +1,8 @@
-import TeamPage from "@/features/team";
 import React from "react";
+import AboutMe from "@/features/about-me";
 
 const UberMich = () => {
-  return <TeamPage />;
+  return <AboutMe />;
 };
 
 export default UberMich;

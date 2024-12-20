@@ -18,10 +18,10 @@ export default function Footer() {
             <Typography variant="h6" gutterBottom>
               Kontakt
             </Typography>
-            <Typography variant="body2">Musterstraße 1</Typography>
-            <Typography variant="body2">12345 Musterstadt</Typography>
-            <Typography variant="body2">Telefon: +49 123 456789</Typography>
-            <Typography variant="body2">Email: info@praxis.de</Typography>
+            <Typography variant="body2">Martinstraße 11</Typography>
+            <Typography variant="body2">73728 Esslingen am Neckar</Typography>
+            <Typography variant="body2">Telefon: 07115 0091363</Typography>
+            <Typography variant="body2">Email: info@hnopolat.de</Typography>
           </Grid>
           <Grid item xs={12} md={4} textAlign={"center"}>
             <Typography variant="h6" gutterBottom>
@@ -31,7 +31,15 @@ export default function Footer() {
               Home
             </Link>
             <Link
-              href="/services"
+              href="/ueber-mich"
+              color="inherit"
+              underline="hover"
+              display="block"
+            >
+              Über mich
+            </Link>
+            <Link
+              href="/leistungen"
               color="inherit"
               underline="hover"
               display="block"
@@ -39,15 +47,15 @@ export default function Footer() {
               Leistungen
             </Link>
             <Link
-              href="/about"
+              href="/online-termin"
               color="inherit"
               underline="hover"
               display="block"
             >
-              Über Uns
+              Online Termin
             </Link>
             <Link
-              href="/contact"
+              href="/kontakt"
               color="inherit"
               underline="hover"
               display="block"
@@ -82,7 +90,8 @@ export default function Footer() {
         <Divider sx={{ my: 3 }} />
         <Box textAlign="center">
           <Typography variant="body2" color="text.secondary">
-            © {new Date().getFullYear()} Ihre Praxis. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} HNO Praxis Polat. Alle Rechte
+            vorbehalten.
           </Typography>
         </Box>
       </Container>

@@ -10,8 +10,8 @@ import Footer from "@/components/Footer";
 Amplify.configure(outputs);
 
 export const metadata: Metadata = {
-  title: "HNO Praxis Esslingen | Dr. Bahtiyar Polat",
-  description: "HNO Praxis Esslingen | Dr. Bahtiyar Polat",
+  title: "HNO Praxis Polat Esslingen | Dr. Tip. Bahtiyar Polat",
+  description: "HNO Praxis Polat Esslingen | Dr. Tip. Bahtiyar Polat",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body>
         <Header />
         {children}

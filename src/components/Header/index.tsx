@@ -8,7 +8,7 @@ const Header = () => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: "white",
+        backgroundColor: "#f8f8f8",
       }}
     >
       {/* <Topbar /> */}
