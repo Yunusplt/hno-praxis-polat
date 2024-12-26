@@ -6,6 +6,7 @@ import "./global.css";
 import { Amplify } from "aws-amplify";
 import outputs from "../../amplify_outputs.json";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 Amplify.configure(outputs);
 
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body>
-        {/* <Header /> */}
+        <Header />
         {children}
         <Footer />
       </body>
