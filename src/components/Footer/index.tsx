@@ -47,7 +47,7 @@ export default function Footer() {
               Leistungen
             </Link>
             <Link
-              href="/online-termin"
+              href="https://www.termed.de/arzt/9154/bahtiyar-polat"
               color="inherit"
               underline="hover"
               display="block"

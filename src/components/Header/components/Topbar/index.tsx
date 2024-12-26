@@ -72,7 +72,7 @@ const Topbar = () => {
           >
             <CalendarMonthIcon fontSize="small" />
             <Link
-              href="/online-termin"
+              href="/https://www.termed.de/arzt/9154/bahtiyar-polat"
               sx={{ textDecoration: "none", color: "black" }}
             >
               Online Termin
