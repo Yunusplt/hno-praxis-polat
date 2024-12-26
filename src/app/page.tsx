@@ -1,4 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import React from "react";
+import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import Logo from "../assets/images/HNO_Polat_Color.png";
 import Image from "next/image";
 import HomePageImage from "@/assets/images/WZ3.jpeg";
 
@@ -93,4 +95,6 @@ export default function Home() {
       </Box>
     </main>
   );
-}
+};
+
+export default HomePage;
