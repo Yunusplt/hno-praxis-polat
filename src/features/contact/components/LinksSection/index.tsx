@@ -25,10 +25,10 @@ const LinkSection = () => {
           <Typography
             variant="body1"
             component="a"
-            href="tel:+0123456789"
+            href="tel:071150091363"
             color="primary"
           >
-            <LocalPhoneIcon /> +49123 456 789
+            <LocalPhoneIcon /> 07115 0091363
           </Typography>
           <Typography
             variant="body1"
@@ -36,7 +36,7 @@ const LinkSection = () => {
             href="mailto:info@hnopolat.com"
             color="primary"
           >
-            <EmailIcon color="primary" /> info@hnopolat.com
+            <EmailIcon color="primary" /> info@hnopolat.de
           </Typography>
           <Typography variant="body1" component="p" color="primary">
             <MapIcon color="primary" />
@@ -46,7 +46,9 @@ const LinkSection = () => {
             variant="contained"
             startIcon={<CalendarMonthIcon />}
             sx={{ width: "155px", textTransform: "none" }}
-            onClick={() => router.push("/online-termin")}
+            onClick={() =>
+              router.push("https://www.termed.de/arzt/9154/bahtiyar-polat")
+            }
           >
             Online Termin
           </Button>
@@ -55,9 +57,7 @@ const LinkSection = () => {
             startIcon={<LocationOnIcon />}
             sx={{ width: "300px", textTransform: "none" }}
             onClick={() =>
-              window.open(
-                "https://www.google.com/maps/dir//Martinstraße+11,+73728+Esslingen+am+Neckar"
-              )
+              window.open("https://maps.app.goo.gl/Cm1tdKYLZnA3cZEJ6")
             }
           >
             Anfahrt | Route durch Google Maps

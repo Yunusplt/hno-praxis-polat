@@ -37,10 +37,10 @@ const Topbar = () => {
             >
               <LocalPhoneIcon fontSize="small" />
               <Link
-                href="tel:+1234567890"
+                href="tel:071150091363"
                 sx={{ textDecoration: "none", color: "black" }}
               >
-                +1234567890
+                071150091363
               </Link>
             </Typography>
             {/* Mail  */}
@@ -54,10 +54,10 @@ const Topbar = () => {
             >
               <EmailIcon fontSize="small" />
               <Link
-                href="mailto:info@example.com"
+                href="mailto:info@hnopolat.de"
                 sx={{ textDecoration: "none", color: "black" }}
               >
-                info@example.com
+                info@hnopolat.de
               </Link>
             </Typography>
           </Box>
@@ -72,7 +72,7 @@ const Topbar = () => {
           >
             <CalendarMonthIcon fontSize="small" />
             <Link
-              href="/online-termin"
+              href="/https://www.termed.de/arzt/9154/bahtiyar-polat"
               sx={{ textDecoration: "none", color: "black" }}
             >
               Online Termin

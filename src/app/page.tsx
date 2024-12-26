@@ -2,117 +2,98 @@ import React from "react";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import Logo from "../assets/images/HNO_Polat_Color.png";
 import Image from "next/image";
+import HomePageImage from "@/assets/images/WZ3.jpeg";
 
-const HomePage = () => {
+export default function Home() {
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        justifyContent: "center",
-        backgroundImage: "url('/background.jpg')", // Arka plan resmi eklemek isterseniz
-        backgroundColor: "#E8F5E9", // Hafif yeşil tonlarında bir arka plan
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        padding: 2,
-        gap: 8,
-      }}
-    >
-      <Image src={Logo} alt="HNO Polat Logo" width={283} height={86} />
-
-      <Container
-        maxWidth="sm"
+    <main>
+      <Box
         sx={{
-          backgroundColor: "#ffffff",
-          borderRadius: 3,
-          boxShadow: 3,
-          padding: 4,
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "90vh",
+          width: "100%",
         }}
       >
-        <Typography
-          variant="h4"
-          align="center"
-          gutterBottom
+        {/* Background Image */}
+        <Image
+          src={HomePageImage}
+          alt="HomePage Image"
+          fill
+          priority
+          sizes="100%"
+          style={{
+            objectFit: "cover",
+            objectPosition: "bottom",
+            filter: "brightness(95%)",
+          }}
+        />
+        {/* Text */}
+        <Box
           sx={{
-            fontWeight: "bold",
-            color: "#15427c", // HNO için yeşil bir ton
+            position: "absolute",
+            textAlign: "center",
+            p: 3,
+            color: "white", // Yazı rengi
+            backgroundColor: "rgba(0, 0, 0, 0.3)", // Hafif siyah arka plan opaklık
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          Herzlich Willkommen
-        </Typography>
-        <Typography
-          variant="h6"
-          align="center"
-          gutterBottom
-          sx={{
-            color: "#1b7fc1", // Daha koyu bir yeşil ton
-          }}
-        >
-          Ab Januar sind wir für Sie da!
-        </Typography>
-        <Typography
-          variant="body1"
-          align="center"
-          gutterBottom
-          sx={{
-            color: "#1b7fc1", // Nötr bir gri ton
-          }}
-        >
-          Wir freuen uns, Sie in unserer neuen HNO-Praxis begrüßen zu dürfen.
-        </Typography>
-        <Typography
-          variant="subtitle2"
-          align="center"
-          gutterBottom
-          sx={{
-            color: "#1b7fc1", // Nötr bir gri ton
-            fontSize: "1.2rem",
-          }}
-        >
-          Dr. Bahtiyar Polat
-        </Typography>
-        <Grid container justifyContent="center" sx={{ mt: 3 }}>
-          <Grid item>
-            <Paper
-              elevation={1}
+          <Typography
+            sx={{
+              position: "absolute",
+              top: {
+                xs: 60,
+                md: 80,
+              },
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+            variant="h2"
+            component="h1"
+            gutterBottom
+            color="warning"
+          >
+            Herzlich Willkommen!
+          </Typography>
+          <Box
+            sx={{
+              maxWidth: 700,
+            }}
+          >
+            <Typography variant="h6" component="p" mt={7}>
+              Es freut uns sehr, Sie auf unserer Homepage begrüßen zu dürfen.{" "}
+              <br /> In unserer HNO-Praxis kümmern wir uns um Ihre Gesundheit
+              mit größter Sorgfalt und Professionalität.
+            </Typography>
+            <Typography
+              variant="h4"
+              component="p"
+              mt={4}
               sx={{
-                padding: 2,
-                backgroundColor: "#E8F5E9",
-                borderRadius: 2,
+                backgroundColor: "rgba(255, 255, 255, 0.5)",
+                borderRadius: 5,
+                color: "#1c81c1  ",
+                p: 1,
+                fontWeight: "bold",
+                fontSize: {
+                  xs: "1rem",
+                  md: "2rem",
+                },
               }}
             >
-              <Typography
-                variant="body2"
-                align="center"
-                sx={{ fontWeight: "bold", color: "#15427c" }}
-              >
-                Adresse:
-              </Typography>
-              <Typography
-                variant="body1"
-                align="center"
-                sx={{
-                  color: "#1b7fc1",
-                  cursor: "pointer",
-                  textDecoration: "underline",
-                }}
-              >
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Martinstraße+11,+73728+Esslingen+am+Neckar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  Martinstraße 11, 73728 Esslingen am Neckar
-                </a>
-              </Typography>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+              Ab Januar 2025 sind wir für Sie da.
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+    </main>
   );
 };
 

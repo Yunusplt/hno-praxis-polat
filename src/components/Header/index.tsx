@@ -1,5 +1,5 @@
 import React from "react";
-import Topbar from "./components/Topbar";
+// import Topbar from "./components/Topbar";
 import Navbar from "./components/Navbar";
 import AppBar from "@mui/material/AppBar";
 
@@ -8,10 +8,10 @@ const Header = () => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: "white",
+        backgroundColor: "#f8f8f8",
       }}
     >
-      <Topbar />
+      {/* <Topbar /> */}
       <Navbar />
     </AppBar>
   );
