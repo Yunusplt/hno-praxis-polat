@@ -87,7 +87,7 @@ const Impressum = () => {
         <p>Martinstraße, 11</p>
         <p>73728 Esslingen am Neckar</p>
         <h2>Kontakt</h2>
-        <p>Telefon: 07115 0091363</p>
+        <p>Telefon: 0711 50091363</p>
         <p>E-Mail: info@hnopolat.de</p>
         <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
         <p>Berufsbezeichnung:</p>

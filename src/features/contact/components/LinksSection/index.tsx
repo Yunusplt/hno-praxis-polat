@@ -28,7 +28,7 @@ const LinkSection = () => {
             href="tel:071150091363"
             color="primary"
           >
-            <LocalPhoneIcon /> 07115 0091363
+            <LocalPhoneIcon /> 0711 50091363
           </Typography>
           <Typography
             variant="body1"

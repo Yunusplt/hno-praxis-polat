@@ -93,11 +93,11 @@ const AboutMe = ({
                 sx={{ color: "text.secondary", textAlign: "justify", mb: 2 }}
               >
                 Herzlich Willkommen auf meiner Praxis-Webseite! Mein Name ist
-                Dr. Bahtiyar Polat, und ich bin Facharzt für
+                Dr. Bahtiyar Polat und ich bin Facharzt für
                 Hals-Nasen-Ohren-Heilkunde (HNO) mit 18 Jahren Berufserfahrung.
                 Nach einer langjährigen Tätigkeit in renommierten Kliniken in
-                der Türkei/Deutschland und bisher HNO-Zentrum in Winnenden habe
-                ich mich nun dazu entschlossen, meine eigene HNO-Praxis in
+                der Türkei/Deutschland und zuletzt am HNO-Zentrum in Winnenden
+                habe ich mich nun dazu entschlossen, meine eigene HNO-Praxis in
                 Esslingen am Neckar zu eröffnen, um meinen Patientinnen und
                 Patienten eine noch individuellere und persönlichere Betreuung
                 zu bieten.
