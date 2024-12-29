@@ -85,7 +85,7 @@ const AboutMe = ({
                 textAlign={"center"}
                 gutterBottom
               >
-                Dr tip. Bahtiyar Polat
+                Dr. Bahtiyar Polat
               </Typography>
               <Typography
                 variant="subtitle1"
@@ -105,13 +105,21 @@ const AboutMe = ({
               <Typography
                 variant="subtitle1"
                 component="div"
-                sx={{ color: "text.secondary", textAlign: "justify" }}
+                sx={{ color: "text.secondary", textAlign: "justify", mb: 2 }}
               >
                 In meiner neuen Praxis möchte ich einen Raum schaffen, in dem
                 Sie sich gut aufgehoben und verstanden fühlen. Ich lege großen
                 Wert auf eine vertrauensvolle Zusammenarbeit und nehme mir die
                 Zeit, Ihre Beschwerden und Wünsche genau zu besprechen, um
                 gemeinsam die beste Therapie für Sie zu finden.
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                component="div"
+                sx={{ color: "text.secondary", textAlign: "justify" }}
+              >
+                Ich freue mich darauf, Sie in meiner neuen Praxis begrüßen zu
+                dürfen!
               </Typography>
             </CardContent>
           </Box>

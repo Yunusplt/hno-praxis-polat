@@ -98,6 +98,29 @@ const Services = ({
         </Typography>
         <Box
           sx={{
+            maxWidth: 800,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            textAlign: "center",
+            mx: "auto",
+          }}
+        >
+          <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+            In unserer Praxis bieten wir Ihnen vollumfängliche diagnostische und
+            therapeutische Behandlungsverfahren aus dem gesamten Spektrum des
+            HNO-Fachgebietes, angefangen vom Kleinkind bis ins hohe Lebensalter.
+          </Typography>
+          <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+            Durch unsere regelmäßigen Fort- und Weiterbildungen sind wir in der
+            Lage, Ihnen die neuesten und innovativsten Untersuchungs- und
+            Behandlungsmethoden auf der Basis langjähriger fachärztlicher
+            Erfahrung zu gewährleisten.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
