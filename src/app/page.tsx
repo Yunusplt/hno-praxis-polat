@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import HomePageImage from "@/assets/images/WZ3.jpeg";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <main>
       <Box
@@ -77,6 +80,9 @@ export default function Home() {
                 mt: 2,
                 fontSize: "20px",
               }}
+              onClick={() =>
+                router.push("https://www.termed.de/arzt/9154/bahtiyar-polat")
+              }
             >
               Online Termin
             </Button>
