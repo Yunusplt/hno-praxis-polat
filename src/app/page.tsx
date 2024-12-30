@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import HomePageImage from "@/assets/images/WZ3.jpeg";
 
@@ -71,24 +71,15 @@ export default function Home() {
               <br /> In unserer HNO-Praxis kümmern wir uns um Ihre Gesundheit
               mit größter Sorgfalt und Professionalität.
             </Typography>
-            <Typography
-              variant="h4"
-              component="p"
-              mt={4}
+            <Button
+              variant="contained"
               sx={{
-                backgroundColor: "rgba(255, 255, 255, 0.5)",
-                borderRadius: 5,
-                color: "#1c81c1  ",
-                p: 1,
-                fontWeight: "bold",
-                fontSize: {
-                  xs: "1rem",
-                  md: "2rem",
-                },
+                mt: 2,
+                fontSize: "20px",
               }}
             >
-              Ab Januar 2025 sind wir für Sie da.
-            </Typography>
+              Online Termin
+            </Button>
           </Box>
         </Box>
       </Box>
