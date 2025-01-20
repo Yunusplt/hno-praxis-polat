@@ -8,6 +8,8 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { LocalBusiness, WithContext, PostalAddress } from "schema-dts";
 import Head from "next/head";
+import Image from "next/image";
+import ProfilePic from "@/assets/images/Profile.jpg";
 
 const globalStructuredData: WithContext<LocalBusiness> = {
   "@context": "https://schema.org",
@@ -87,6 +89,33 @@ const AboutMe = ({
               >
                 Dr. Bahtiyar Polat
               </Typography>
+              <Box
+                sx={{
+                  position: "relative",
+                  mb: "1rem",
+                  height: {
+                    xs: "210px",
+                    sm: "320px",
+                  },
+                  width: {
+                    xs: "345px",
+                    sm: "520px",
+                  },
+                  mx: "auto",
+                  "& img": {
+                    objectFit: "cover",
+                    position: "absolute",
+                  },
+                }}
+              >
+                <Image
+                  src={ProfilePic}
+                  alt="Dr. Bahtiyar Polat Image"
+                  fill
+                  sizes="100%"
+                  priority
+                />
+              </Box>
               <Typography
                 variant="subtitle1"
                 component="div"
