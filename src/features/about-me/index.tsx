@@ -8,6 +8,8 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { LocalBusiness, WithContext, PostalAddress } from "schema-dts";
 import Head from "next/head";
+import Image from "next/image";
+import ProfilePic from "@/assets/images/Profile.jpg";
 
 const globalStructuredData: WithContext<LocalBusiness> = {
   "@context": "https://schema.org",
@@ -85,19 +87,46 @@ const AboutMe = ({
                 textAlign={"center"}
                 gutterBottom
               >
-                Dr tip. Bahtiyar Polat
+                Dr. Bahtiyar Polat
               </Typography>
+              <Box
+                sx={{
+                  position: "relative",
+                  mb: "1rem",
+                  height: {
+                    xs: "210px",
+                    sm: "320px",
+                  },
+                  width: {
+                    xs: "345px",
+                    sm: "520px",
+                  },
+                  mx: "auto",
+                  "& img": {
+                    objectFit: "cover",
+                    position: "absolute",
+                  },
+                }}
+              >
+                <Image
+                  src={ProfilePic}
+                  alt="Dr. Bahtiyar Polat Image"
+                  fill
+                  sizes="100%"
+                  priority
+                />
+              </Box>
               <Typography
                 variant="subtitle1"
                 component="div"
                 sx={{ color: "text.secondary", textAlign: "justify", mb: 2 }}
               >
                 Herzlich Willkommen auf meiner Praxis-Webseite! Mein Name ist
-                Dr. Bahtiyar Polat, und ich bin Facharzt für
+                Dr. Bahtiyar Polat und ich bin Facharzt für
                 Hals-Nasen-Ohren-Heilkunde (HNO) mit 18 Jahren Berufserfahrung.
                 Nach einer langjährigen Tätigkeit in renommierten Kliniken in
-                der Türkei/Deutschland und bisher HNO-Zentrum in Winnenden habe
-                ich mich nun dazu entschlossen, meine eigene HNO-Praxis in
+                der Türkei/Deutschland und zuletzt am HNO-Zentrum in Winnenden
+                habe ich mich nun dazu entschlossen, meine eigene HNO-Praxis in
                 Esslingen am Neckar zu eröffnen, um meinen Patientinnen und
                 Patienten eine noch individuellere und persönlichere Betreuung
                 zu bieten.
@@ -105,13 +134,21 @@ const AboutMe = ({
               <Typography
                 variant="subtitle1"
                 component="div"
-                sx={{ color: "text.secondary", textAlign: "justify" }}
+                sx={{ color: "text.secondary", textAlign: "justify", mb: 2 }}
               >
                 In meiner neuen Praxis möchte ich einen Raum schaffen, in dem
                 Sie sich gut aufgehoben und verstanden fühlen. Ich lege großen
                 Wert auf eine vertrauensvolle Zusammenarbeit und nehme mir die
                 Zeit, Ihre Beschwerden und Wünsche genau zu besprechen, um
                 gemeinsam die beste Therapie für Sie zu finden.
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                component="div"
+                sx={{ color: "text.secondary", textAlign: "justify" }}
+              >
+                Ich freue mich darauf, Sie in meiner neuen Praxis begrüßen zu
+                dürfen!
               </Typography>
             </CardContent>
           </Box>

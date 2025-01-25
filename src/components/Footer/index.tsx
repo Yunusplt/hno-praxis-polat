@@ -20,7 +20,7 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2">Martinstraße 11</Typography>
             <Typography variant="body2">73728 Esslingen am Neckar</Typography>
-            <Typography variant="body2">Telefon: 07115 0091363</Typography>
+            <Typography variant="body2">Telefon: 0711 50091363</Typography>
             <Typography variant="body2">Email: info@hnopolat.de</Typography>
           </Grid>
           <Grid item xs={12} md={4} textAlign={"center"}>
