@@ -1,6 +1,7 @@
 // import Header from "@/components/Header";
 import type { Metadata } from "next";
 import "./global.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Amplify configuration
 import { Amplify } from "aws-amplify";
