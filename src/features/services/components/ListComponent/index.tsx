@@ -37,7 +37,10 @@ export default function ListComponent() {
           <Demo>
             <List dense={true} sx={{ p: 0 }}>
               {serviceData1.map((item, index) => (
-                <ListItem key={"service-list" + index}>
+                <ListItem
+                  key={"service-list-1" + index}
+                  sx={{ minWidth: "250px" }}
+                >
                   <ListItemIcon>
                     <KeyboardArrowRightIcon />
                   </ListItemIcon>
@@ -51,7 +54,10 @@ export default function ListComponent() {
           <Demo>
             <List dense={true} sx={{ p: 0 }}>
               {serviceData2.map((item, index) => (
-                <ListItem key={"service-list" + index}>
+                <ListItem
+                  key={"service-list-2" + index}
+                  sx={{ minWidth: "250px" }}
+                >
                   <ListItemIcon>
                     <KeyboardArrowRightIcon />
                   </ListItemIcon>
