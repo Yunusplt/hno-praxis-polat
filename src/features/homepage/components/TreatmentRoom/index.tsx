@@ -1,27 +1,13 @@
 import * as React from "react";
-// import { styled } from "@mui/material/styles";
-
-// import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid2";
-import { Box, Container, Typography } from "@mui/material";
-
-import OpenningHoursTable from "@/features/contact/components/OpenningHoursTable";
 import Image from "next/image";
-import TreatmentRoomImage from "@/assets/images/Allgemeine.jpg";
-import WaitingRoamImage from "@/assets/images/Wartezimmer.jpg";
-import DeskImage from "@/assets/images/Empfäng.jpg";
 import Carousel from "react-bootstrap/Carousel";
-
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: "#fff",
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: "center",
-//   color: theme.palette.text.secondary,
-//   ...theme.applyStyles("dark", {
-//     backgroundColor: "#1A2027",
-//   }),
-// }));
+import DeskImage from "@/assets/images/Empfäng.jpg";
+import WaitingRoamImage from "@/assets/images/Wartezimmer.jpg";
+import TreatmentRoomImage from "@/assets/images/Allgemeine.jpg";
+import HearingRoomImage from "@/assets/images/Hörtestzimmer.jpg";
+import OpenningHoursTable from "@/features/contact/components/OpenningHoursTable";
+import { Box, Container, Typography } from "@mui/material";
 
 export default function TreatmentRoom() {
   return (
@@ -76,19 +62,15 @@ export default function TreatmentRoom() {
             width: "100%",
           }}
         >
-          {/* <Box
-            sx={{
-              position: "relative",
-              height: "570px",
-              width: "320px",
-              borderRadius: 3,
-              overflow: "hidden",
-            }}
-          >
-           
-          </Box> */}
           <Box
             sx={{
+              "& h3": {
+                backgroundColor: "#33333373",
+                display: "inline-block",
+                p: 1,
+                px: 2,
+                borderRadius: 3,
+              },
               "& img": {
                 borderRadius: 3,
                 height: {
@@ -125,6 +107,16 @@ export default function TreatmentRoom() {
                 <Image src={DeskImage} alt="Empfäng-Bild" />
                 <Carousel.Caption>
                   <h3>Empfangsbereich</h3>
+                  {/* <p>
+                    Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur.
+                  </p> */}
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item interval={2000}>
+                <Image src={HearingRoomImage} alt="Hörtestzimmer-Bild" />
+                <Carousel.Caption>
+                  <h3>Hörtestzimmer</h3>
                   {/* <p>
                     Praesent commodo cursus magna, vel scelerisque nisl
                     consectetur.
