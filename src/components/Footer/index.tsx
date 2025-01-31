@@ -85,8 +85,6 @@ export default function Footer() {
             </Link>
           </Grid>
         </Grid>
-
-        {/* Alt Bölüm: Copyright */}
         <Divider sx={{ my: 3 }} />
         <Box textAlign="center">
           <Typography variant="body2" color="text.secondary">

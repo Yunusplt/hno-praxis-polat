@@ -6,6 +6,7 @@ import Head from "next/head";
 import ListComponent from "./components/ListComponent";
 import Image from "next/image";
 import LesitungenImage from "@/assets/images/services/LeistungenImage.png";
+import { styleImageBox } from "./style";
 
 const Services = ({
   metadata,
@@ -93,24 +94,7 @@ const Services = ({
               alignItems: "center",
             }}
           >
-            <Box
-              sx={{
-                position: "relative",
-                height: {
-                  xs: "450px",
-                  sm: "550px",
-                  md: "660px",
-                },
-                width: {
-                  xs: "350px",
-                  sm: "430px",
-                  md: "500px",
-                },
-                "& .img": {
-                  objectFit: "cover",
-                },
-              }}
-            >
+            <Box sx={styleImageBox}>
               <Image
                 src={LesitungenImage}
                 fill
