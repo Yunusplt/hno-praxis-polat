@@ -3,20 +3,17 @@ import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import HomePageImage from "@/assets/images/WZ3.jpeg";
 import { useRouter } from "next/navigation";
+import {
+  styleLandingPageBox,
+  styleLandingPageButton,
+  styleLandingPageH1,
+  styleLandingPageTextBox,
+} from "../../style";
 
 const LandingPage = () => {
   const router = useRouter();
   return (
-    <Box
-      sx={{
-        position: "relative",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-        width: "100%",
-      }}
-    >
+    <Box sx={styleLandingPageBox}>
       {/* Background Image */}
       <Image
         src={HomePageImage}
@@ -24,37 +21,11 @@ const LandingPage = () => {
         fill
         priority
         sizes="100%"
-        style={{
-          objectFit: "cover",
-          objectPosition: "bottom",
-          filter: "brightness(95%)",
-        }}
       />
       {/* Text */}
-      <Box
-        sx={{
-          position: "absolute",
-          textAlign: "center",
-          p: 3,
-          color: "white", // Yazı rengi
-          backgroundColor: "rgba(0, 0, 0, 0.3)", // Hafif siyah arka plan opaklık
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Box sx={styleLandingPageTextBox}>
         <Typography
-          sx={{
-            position: "absolute",
-            top: {
-              xs: 60,
-              md: 80,
-            },
-            left: "50%",
-            transform: "translateX(-50%)",
-          }}
+          sx={styleLandingPageH1}
           variant="h2"
           component="h1"
           gutterBottom
@@ -62,11 +33,7 @@ const LandingPage = () => {
         >
           Herzlich Willkommen!
         </Typography>
-        <Box
-          sx={{
-            maxWidth: 700,
-          }}
-        >
+        <Box sx={{ maxWidth: 700 }}>
           <Typography variant="h6" component="p" mt={7}>
             Es freut uns sehr, Sie auf unserer Homepage begrüßen zu dürfen.{" "}
             <br /> In unserer HNO-Praxis kümmern wir uns um Ihre Gesundheit mit
@@ -74,10 +41,7 @@ const LandingPage = () => {
           </Typography>
           <Button
             variant="contained"
-            sx={{
-              mt: 2,
-              fontSize: "20px",
-            }}
+            sx={styleLandingPageButton}
             onClick={() =>
               router.push("https://www.termed.de/arzt/9154/bahtiyar-polat")
             }

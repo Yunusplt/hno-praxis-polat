@@ -1,13 +1,13 @@
 "use client";
-import LandingPage from "@/features/homepage/components/LandingPage";
-import TreatmentRoom from "@/features/homepage/components/TreatmentRoom";
 import React from "react";
+import LandingPage from "@/features/homepage/components/LandingPage";
+import OpenningTimeAndImages from "@/features/homepage/components/OpenningTimeAndImages";
 
 export default function Home() {
   return (
     <main>
       <LandingPage />
-      <TreatmentRoom />
+      <OpenningTimeAndImages />
     </main>
   );
 }

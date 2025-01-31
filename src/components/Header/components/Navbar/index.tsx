@@ -1,25 +1,28 @@
 "use client";
 import React, { Fragment } from "react";
+import Image from "next/image";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
 import Logo from "@/assets/images/logos/HNOPolatLogo.png";
-import Image from "next/image";
-import {
-  Divider,
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-} from "@mui/material";
+import { pages } from "../../utils/pages";
 import { useRouter } from "next/navigation";
-import { pages } from "./utils/pages";
-
-const drawerWidth = 240;
+import {
+  List,
+  Drawer,
+  Divider,
+  ListItem,
+  ListItemText,
+  ListItemButton,
+} from "@mui/material";
+import {
+  styleDrawer,
+  styleLogoMobileView,
+  styleLogoDesktopView,
+} from "../style";
 
 function Navbar() {
   //! States
@@ -37,19 +40,7 @@ function Navbar() {
     <Container maxWidth="lg">
       <Toolbar disableGutters>
         {/*Desktop LOGO */}
-        <Box
-          onClick={() => router.push("/")}
-          sx={{
-            display: { xs: "none", sm: "flex" },
-            cursor: "pointer",
-            flexGrow: 1,
-            py: 1,
-            "& img": {
-              width: { sm: 188, md: 283 },
-              height: { sm: 58, md: 86 },
-            },
-          }}
-        >
+        <Box onClick={() => router.push("/")} sx={styleLogoDesktopView}>
           <Image src={Logo} alt="Logo" />
         </Box>
         {/* MOBILE VIEW */}
@@ -70,14 +61,7 @@ function Navbar() {
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
             }}
-            sx={{
-              display: { xs: "block", sm: "none" },
-              color: "black",
-              "& .MuiDrawer-paper": {
-                boxSizing: "border-box",
-                width: drawerWidth,
-              },
-            }}
+            sx={styleDrawer}
           >
             <Box
               onClick={handleDrawerToggle}
@@ -110,13 +94,7 @@ function Navbar() {
           </Drawer>
         </Box>
         {/* MOBILE LOGO */}
-        <Box
-          onClick={() => router.push("/")}
-          sx={{
-            display: { xs: "flex", sm: "none" },
-            py: 1,
-          }}
-        >
+        <Box onClick={() => router.push("/")} sx={styleLogoMobileView}>
           <Image src={Logo} alt="Logo" height={50} width={150} />
         </Box>
         {/* DESKTOP VIEW PAGES */}

@@ -1,15 +1,16 @@
 "use client";
-import { Container } from "@mui/material";
 import React from "react";
-import { styleContactContainer } from "../contact/style";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import { LocalBusiness, WithContext, PostalAddress } from "schema-dts";
 import Head from "next/head";
 import Image from "next/image";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import CardContent from "@mui/material/CardContent";
 import ProfilePic from "@/assets/images/Profile.jpg";
+import { styleImageBox } from "./style";
+import { Container } from "@mui/material";
+import { styleContactContainer } from "../contact/style";
+import { LocalBusiness, WithContext, PostalAddress } from "schema-dts";
 
 const globalStructuredData: WithContext<LocalBusiness> = {
   "@context": "https://schema.org",
@@ -89,25 +90,7 @@ const AboutMe = ({
               >
                 Dr. Bahtiyar Polat
               </Typography>
-              <Box
-                sx={{
-                  position: "relative",
-                  mb: "1rem",
-                  height: {
-                    xs: "210px",
-                    sm: "320px",
-                  },
-                  width: {
-                    xs: "345px",
-                    sm: "520px",
-                  },
-                  mx: "auto",
-                  "& img": {
-                    objectFit: "cover",
-                    position: "absolute",
-                  },
-                }}
-              >
+              <Box sx={styleImageBox}>
                 <Image
                   src={ProfilePic}
                   alt="Dr. Bahtiyar Polat Image"
