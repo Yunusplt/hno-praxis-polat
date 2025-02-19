@@ -15,25 +15,18 @@ export const styleLandingPageBox = {
 
 export const styleLandingPageTextBox = {
   position: "absolute",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
   textAlign: "center",
-  p: 3,
-  color: "white",
   backgroundColor: "rgba(0, 0, 0, 0.3)",
   height: "100%",
   width: "100%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
-export const styleLandingPageH1 = {
-  position: "absolute",
-  top: {
-    xs: 60,
-    md: 80,
+  "& p": {
+    color: "white",
+    maxWidth: "700px",
   },
-  left: "50%",
-  transform: "translateX(-50%)",
 };
 
 export const styleLandingPageButton = {

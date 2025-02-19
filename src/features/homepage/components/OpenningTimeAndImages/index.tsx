@@ -39,7 +39,7 @@ export default function OpenningTimeAndImages() {
               <Carousel.Item interval={2000}>
                 <Image src={TreatmentRoomImage} alt="Behandlungszimmer-Bild" />
                 <Carousel.Caption>
-                  <h3>Behandlungzimmer</h3>
+                  <h3>Behandlungszimmer</h3>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item interval={2000}>
