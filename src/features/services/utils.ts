@@ -29,6 +29,9 @@ export const serviceData1 = [
   {
     title: "Sprachtestung",
   },
+  {
+    title: "Polygraphie (Schlafdiagnostik)",
+  },
 ];
 
 export const serviceData2 = [
