@@ -54,6 +54,10 @@ const LandingPage = () => {
         >
           Online Termin
         </Button>
+        <Typography textAlign="center" mt={1}>
+          Für Kinder <strong>unter 3 Jahren</strong> ist eine{" "}
+          <strong>Überweisung</strong> zwingend erforderlich.
+        </Typography>
       </Box>
       <InfoModal
         open={openDialog}
