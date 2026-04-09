@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -23,10 +23,12 @@ import {
   styleLogoMobileView,
   styleLogoDesktopView,
 } from "../style";
+import InfoModal from "@/components/Modals/InfoModal";
 
 function Navbar() {
   //! States
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
 
   //! hooks
   const router = useRouter();
@@ -36,10 +38,36 @@ function Navbar() {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const handleOpenDialog = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  const handleContinue = () => {
+    window.open(
+      "https://www.termed.de/arzt/9154/bahtiyar-polat",
+      "_blank",
+      "noopener,noreferrer"
+    );
+    handleCloseDialog();
+  };
+
+  const handleNavigation = (href: string, title: string) => {
+    if (title === "Online Termin") {
+      handleOpenDialog();
+      return;
+    }
+
+    router.push(href);
+  };
+
   return (
     <Container maxWidth="lg">
       <Toolbar disableGutters>
-        {/*Desktop LOGO */}
+        {/* Desktop LOGO */}
         <Box onClick={() => router.push("/")} sx={styleLogoDesktopView}>
           <Image src={Logo} alt="Logo" />
         </Box>
@@ -59,21 +87,14 @@ function Navbar() {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true,
             }}
             sx={styleDrawer}
           >
-            <Box
-              onClick={handleDrawerToggle}
-              sx={{ textAlign: "center", mt: 1 }}
-            >
-              <Image
-                src={Logo}
-                alt="Logo"
-                height={50}
-                width={150}
-                onClick={() => router.push("/")}
-              />
+            <Box sx={{ textAlign: "center", mt: 1 }}>
+              <Box onClick={() => router.push("/")}>
+                <Image src={Logo} alt="Logo" height={50} width={150} />
+              </Box>
               <Divider />
               <List>
                 {pages.map((item) => (
@@ -81,7 +102,10 @@ function Navbar() {
                     <ListItem disablePadding>
                       <ListItemButton
                         sx={{ textAlign: "center" }}
-                        onClick={() => router.push(item.href)}
+                        onClick={() => {
+                          handleDrawerToggle();
+                          handleNavigation(item.href, item.title);
+                        }}
                       >
                         <ListItemText primary={item.title} />
                       </ListItemButton>
@@ -103,15 +127,21 @@ function Navbar() {
             <Button
               key={page.title}
               sx={{ my: 2, color: "black", display: "block", fontWeight: 600 }}
-              onClick={() => router.push(page.href)}
+              onClick={() => handleNavigation(page.href, page.title)}
             >
               {page.title}
             </Button>
           ))}
         </Box>
-        <Box sx={{ flexGrow: 0 }}></Box>
+        <Box sx={{ flexGrow: 0 }} />
+        <InfoModal
+          open={openDialog}
+          onClose={handleCloseDialog}
+          onContinue={handleContinue}
+        />
       </Toolbar>
     </Container>
   );
 }
+
 export default Navbar;
