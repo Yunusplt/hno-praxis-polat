@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid2";
 import Paper from "@mui/material/Paper";
 import MapIcon from "@mui/icons-material/Map";
@@ -6,13 +6,30 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import { useRouter } from "next/navigation";
 import { Button, Stack, Typography } from "@mui/material";
 import { styleLinksBox, styleLinksTitle } from "../../style";
+import InfoModal from "@/components/Modals/InfoModal";
 
 const LinkSection = () => {
-  //! hooks
-  const router = useRouter();
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const handleOpenDialog = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  const handleContinue = () => {
+    window.open(
+      "https://www.termed.de/arzt/9154/bahtiyar-polat",
+      "_blank",
+      "noopener,noreferrer"
+    );
+    handleCloseDialog();
+  };
+
   return (
     <>
       <Grid size={{ xs: 12, md: 6 }} order={1}>
@@ -46,9 +63,7 @@ const LinkSection = () => {
             variant="contained"
             startIcon={<CalendarMonthIcon />}
             sx={{ width: "155px", textTransform: "none" }}
-            onClick={() =>
-              router.push("https://www.termed.de/arzt/9154/bahtiyar-polat")
-            }
+            onClick={handleOpenDialog}
           >
             Online Termin
           </Button>
@@ -64,6 +79,12 @@ const LinkSection = () => {
           </Button>
         </Stack>
       </Grid>
+      {/* 🔥 MODAL */}
+      <InfoModal
+        open={openDialog}
+        onClose={handleCloseDialog}
+        onContinue={handleContinue}
+      />
     </>
   );
 };

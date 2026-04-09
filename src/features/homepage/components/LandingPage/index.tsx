@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import HomePageImage from "@/assets/images/WZ3.jpeg";
-import { useRouter } from "next/navigation";
 import {
   styleLandingPageBox,
   styleLandingPageButton,
   styleLandingPageTextBox,
 } from "../../style";
+import InfoModal from "@/components/Modals/InfoModal";
 
 const LandingPage = () => {
-  const router = useRouter();
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const handleOpenDialog = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  const handleContinue = () => {
+    window.open(
+      "https://www.termed.de/arzt/9154/bahtiyar-polat",
+      "_blank",
+      "noopener,noreferrer"
+    );
+    handleCloseDialog();
+  };
+
   return (
     <Box sx={styleLandingPageBox}>
-      {/* Background Image */}
       <Image
         src={HomePageImage}
         alt="HomePage Image"
@@ -21,26 +38,32 @@ const LandingPage = () => {
         priority
         sizes="100%"
       />
-      {/* Text */}
       <Box sx={styleLandingPageTextBox}>
         <Typography variant="h2" component="h1" gutterBottom color="warning">
           Herzlich Willkommen!
         </Typography>
         <Typography variant="h6" component="p">
-          Es freut uns sehr, Sie auf unserer Homepage begrüßen zu dürfen. <br />{" "}
+          Es freut uns sehr, Sie auf unserer Homepage begrüßen zu dürfen. <br />
           In unserer HNO-Praxis kümmern wir uns um Ihre Gesundheit mit größter
           Sorgfalt und Professionalität.
         </Typography>
         <Button
           variant="contained"
           sx={styleLandingPageButton}
-          onClick={() =>
-            router.push("https://www.termed.de/arzt/9154/bahtiyar-polat")
-          }
+          onClick={handleOpenDialog}
         >
           Online Termin
         </Button>
+        <Typography textAlign="center" mt={1}>
+          Für Kinder <strong>unter 3 Jahren</strong> ist eine{" "}
+          <strong>Überweisung</strong> zwingend erforderlich.
+        </Typography>
       </Box>
+      <InfoModal
+        open={openDialog}
+        onClose={handleCloseDialog}
+        onContinue={handleContinue}
+      />
     </Box>
   );
 };

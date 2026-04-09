@@ -1,7 +1,29 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Box, Grid, Typography, Link, Divider, Container } from "@mui/material";
+import InfoModal from "../Modals/InfoModal";
 
 export default function Footer() {
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const handleOpenDialog = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  const handleContinue = () => {
+    window.open(
+      "https://www.termed.de/arzt/9154/bahtiyar-polat",
+      "_blank",
+      "noopener,noreferrer"
+    );
+    handleCloseDialog();
+  };
+
   return (
     <Box
       component="footer"
@@ -51,6 +73,7 @@ export default function Footer() {
               color="inherit"
               underline="hover"
               display="block"
+              onClick={handleOpenDialog}
             >
               Online Termin
             </Link>
@@ -92,6 +115,12 @@ export default function Footer() {
             vorbehalten.
           </Typography>
         </Box>
+        {/* 🔥 MODAL */}
+        <InfoModal
+          open={openDialog}
+          onClose={handleCloseDialog}
+          onContinue={handleContinue}
+        />
       </Container>
     </Box>
   );
