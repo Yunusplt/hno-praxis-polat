@@ -21,7 +21,7 @@ type InfoModalProps = {
   onContinue: () => void;
 };
 
-type Language = "de" | "tr";
+type Language = "de" | "en" | "tr";
 
 const translations = {
   de: {
@@ -45,7 +45,7 @@ const translations = {
     ],
   },
   tr: {
-    title: "Önemli Bilgilendirmeler",
+    title: "Önemli Bilgiler",
     continue: "Randevuya devam et",
     cancel: "İptal",
     languageLabel: "Dil",
@@ -64,6 +64,26 @@ const translations = {
       },
     ],
   },
+  en: {
+    title: "Important Information",
+    continue: "Continue appointment",
+    cancel: "Cancel",
+    languageLabel: "Language",
+    hints: [
+      {
+        title: "Online appointment booking",
+        text: "Only one online appointment can be booked within the same quarter. If you need another appointment, please contact us by phone.",
+      },
+      {
+        title: "Private appointments",
+        text: "Bookings in the “Private appointment” section are only valid for privately insured patients and self-paying patients. Patients with statutory health insurance cannot be treated if they book through this section.",
+      },
+      {
+        title: "Children under 3 years",
+        text: "A referral is mandatory for children under 3 years of age.",
+      },
+    ],
+  },
 } satisfies Record<
   Language,
   {
@@ -77,6 +97,7 @@ const translations = {
 
 const languageOptions: { value: Language; label: string }[] = [
   { value: "de", label: "Deutsch" },
+  { value: "en", label: "English" },
   { value: "tr", label: "Türkçe" },
 ];
 
@@ -129,23 +150,13 @@ const InfoModal = ({ open, onClose, onContinue }: InfoModalProps) => {
       <DialogContent
         dividers
         sx={{
-          px: 3,
-          py: 2.5,
+          p: 1,
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
           {content.hints.map((hint, index) => (
-            <Box
-              key={index}
-              sx={{
-                p: 2,
-                borderRadius: 2,
-                bgcolor: "grey.50",
-                border: "1px solid",
-                borderColor: "grey.200",
-              }}
-            >
-              <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 1 }}>
+            <Box key={index} px={2}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 700, mt: 1 }}>
                 {hint.title}
               </Typography>
 
@@ -160,12 +171,14 @@ const InfoModal = ({ open, onClose, onContinue }: InfoModalProps) => {
       <DialogActions
         sx={{
           margin: "auto",
-          pb: 4,
-          pt: 3,
+          py: {
+            xs: 1.5,
+            md: 3,
+          },
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           gap: 1.5,
-          width: "75%",
+          width: "80%",
           "& > :not(:first-of-type)": {
             marginLeft: 0,
           },

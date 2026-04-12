@@ -12,10 +12,7 @@ export const serviceData1 = [
     title: "Lupenlaryngoskopie",
   },
   {
-    title: "Allergologie",
-  },
-  {
-    title: "Pricktest",
+    title: "Pricktest (erwachsene)",
   },
   {
     title: "Bluttest (RAST)",
