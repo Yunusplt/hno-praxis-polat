@@ -19,4 +19,8 @@ export const pages = [
     title: "Kontakt",
     href: "/kontakt",
   },
+  {
+    title: "Downloads",
+    href: "/downloads",
+  },
 ];

@@ -24,7 +24,7 @@ const LandingPage = () => {
     window.open(
       "https://www.termed.de/arzt/9154/bahtiyar-polat",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
     handleCloseDialog();
   };
@@ -54,10 +54,6 @@ const LandingPage = () => {
         >
           Online Termin
         </Button>
-        <Typography textAlign="center" mt={1}>
-          Für Kinder <strong>unter 3 Jahren</strong> ist eine{" "}
-          <strong>Überweisung</strong> zwingend erforderlich.
-        </Typography>
       </Box>
       <InfoModal
         open={openDialog}
