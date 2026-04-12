@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Link, Paper } from "@mui/material";
+import { Container, Typography, Link, Paper } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 
 const DownloadsPage = () => {
