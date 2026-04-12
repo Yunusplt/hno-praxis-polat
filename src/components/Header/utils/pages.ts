@@ -20,7 +20,7 @@ export const pages = [
     href: "/kontakt",
   },
   {
-    title: "Donwloads",
+    title: "Downloads",
     href: "/downloads",
   },
 ];

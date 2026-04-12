@@ -36,7 +36,7 @@ const translations = {
       },
       {
         title: "Privattermine",
-        text: "Die Buchung im Bereich „Privattermin“ gilt ausschließlich für Privatpatienten und Selbstzahler. Gesetzlich versicherte Patienten, die einen Termin über diesen Bereich buchen, können nicht behandelt werden.",
+        text: "Die Buchung im Bereich „Privatsprechstunde“ gilt ausschließlich für Privatpatienten und Selbstzahler. Gesetzlich versicherte Patienten, die einen Termin über diesen Bereich buchen, können nicht behandelt werden.",
       },
       {
         title: "Kinder unter 3 Jahren",
@@ -56,7 +56,7 @@ const translations = {
       },
       {
         title: "Özel randevular",
-        text: "“Privattermin” alanından yapılan rezervasyonlar yalnızca özel sigortalı hastalar ve ücreti kendisi ödeyen kişiler için geçerlidir. Yasal sağlık sigortasına sahip hastalar bu alan üzerinden randevu alırlarsa muayene edilemezler.",
+        text: "“Privatsprechstunde” alanından yapılan rezervasyonlar yalnızca özel sigortalı hastalar ve ücreti kendisi ödeyen kişiler için geçerlidir. Yasal sağlık sigortasına sahip hastalar bu alan üzerinden randevu alırlarsa muayene edilemezler.",
       },
       {
         title: "3 yaş altı çocuklar",
@@ -76,7 +76,7 @@ const translations = {
       },
       {
         title: "Private appointments",
-        text: "Bookings in the “Private appointment” section are only valid for privately insured patients and self-paying patients. Patients with statutory health insurance cannot be treated if they book through this section.",
+        text: "Bookings in the “Privatsprechstunde” section are only valid for privately insured patients and self-paying patients. Patients with statutory health insurance cannot be treated if they book through this section.",
       },
       {
         title: "Children under 3 years",
