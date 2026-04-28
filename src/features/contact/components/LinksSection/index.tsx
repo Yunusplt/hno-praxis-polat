@@ -25,7 +25,7 @@ const LinkSection = () => {
     window.open(
       "https://www.termed.de/arzt/9154/bahtiyar-polat",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
     handleCloseDialog();
   };
@@ -50,7 +50,7 @@ const LinkSection = () => {
           <Typography
             variant="body1"
             component="a"
-            href="mailto:info@hnopolat.com"
+            href="mailto:info@hnopolat.de"
             color="primary"
           >
             <EmailIcon color="primary" /> info@hnopolat.de
